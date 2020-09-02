@@ -1,4 +1,4 @@
-const {App, Page, Component, appLogger, pageLogger} = require('./libs/hook');
+const {App, Page, Component, appLogger, pageLogger} = require('./libs/index');
 
 App.add(appLogger);
 Page.add(pageLogger);

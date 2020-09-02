@@ -1,4 +1,4 @@
-const {Component} = require('../../../libs/hook');
+const {Component} = require('../../../libs/index');
 
 Component({
     properties: {},

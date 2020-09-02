@@ -1,4 +1,4 @@
-const {Page} = require('../../libs/hook');
+const {Page} = require('../../libs/index');
 
 Page({
     data: {
