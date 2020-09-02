@@ -1,0 +1,27 @@
+{
+  "name": "miniapp-hook",
+  "version": "0.0.1",
+  "description": "",
+  "miniprogram": "libs",
+  "main": "libs/hook.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:xesam/miniapp-hook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xesam/miniapp-hook"
+  },
+  "homepage": "https://github.com/xesam/miniapp-hook",
+  "dependencies": {
+    "@xesam/hook": "0.0.1"
+  },
+  "devDependencies": {
+    "jest": "26.1.0"
+  },
+  "keywords": [],
+  "author": "xesam",
+  "license": "ISC"
+}

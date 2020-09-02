@@ -1,0 +1,8 @@
+<view class="container">
+    <view>
+        <text>hello hook</text>
+    </view>
+    <view>
+        <foo/>
+    </view>
+</view>

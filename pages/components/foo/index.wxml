@@ -1,0 +1,3 @@
+<view>
+    <button bind:tap="onTap">Test</button>
+</view>
