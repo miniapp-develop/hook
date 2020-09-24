@@ -9,7 +9,7 @@ hook 小程序的生命周期方法
 [https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)
 
 ```javascript
-const {App, Page, Component, appLogger, pageLogger} = require('./libs/hook');
+const {App, Page, Component, appLogger, pageLogger} = require('miniapp-hook');
 
 App.add(appLogger);
 Page.add(pageLogger);
