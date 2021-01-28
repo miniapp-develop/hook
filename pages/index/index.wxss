@@ -1,0 +1,17 @@
+.header {
+    padding: 36rpx 0;
+    text-align: center;
+    font-size: 56rpx;
+    color: darkcyan;
+}
+
+.action {
+    padding: 24rpx;
+    text-align: center;
+    background: #e4e4e4;
+    margin-top: 16rpx;
+}
+
+.custom-class {
+    color: red;
+}

@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/xesam/miniapp-hook",
   "dependencies": {
-    "@xesam/hook": "0.0.1"
+    "@xesam/hook": "0.1.0"
   },
   "devDependencies": {
     "jest": "26.1.0"

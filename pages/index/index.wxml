@@ -1,8 +1,9 @@
 <view class="container">
-    <view>
-        <text>hello hook</text>
+    <view class="header">
+        hello miniapp-hook
     </view>
-    <view>
-        <foo/>
+    <foo ext-class="custom-class"/>
+    <view class="action" bind:tap="onTapOldPage">
+        old page
     </view>
 </view>

@@ -1,23 +1,7 @@
-const {App, Page, Component, appLogger, pageLogger} = require('./libs/index');
-
-App.add(appLogger);
-Page.add(pageLogger);
-
-Component.add({
-    created() {
-        return {
-            before() {
-                this.onTap = function () {
-                    wx.showModal({
-                        content: 'dynamic onTap'
-                    });
-                };
-            }
-        }
-    }
-});
+import {_App as App} from "./app/index";
 
 App({
-    onLaunch: function () {
+    onLaunch() {
+        console.log('App.onLaunch');
     }
 })

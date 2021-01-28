@@ -1,4 +1,4 @@
-const {Page} = require('../../libs/index');
+import {_Page as Page} from '../../app/index';
 
 Page({
     data: {
@@ -6,6 +6,11 @@ Page({
         key2: 'value2'
     },
     onLoad(query) {
-        console.log('onLoad', query);
+        console.log('Page.onLoad', query);
+    },
+    onTapOldPage(){
+        wx.navigateTo({
+            url:'/pages/old/index'
+        });
     }
 });

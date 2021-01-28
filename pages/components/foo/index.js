@@ -1,7 +1,3 @@
-const {Component} = require('../../../libs/index');
+import {_Component as Component} from '../../../app/index';
 
-Component({
-    properties: {},
-    data: {},
-    methods: {}
-});
+Component({methods: {}});

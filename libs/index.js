@@ -1,1 +1,1 @@
-module.exports = require('hook');
+module.exports = require('./miniapp');
