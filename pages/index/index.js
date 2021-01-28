@@ -6,11 +6,11 @@ Page({
         key2: 'value2'
     },
     onLoad(query) {
-        console.log('Page.onLoad', query);
+        console.log(this.route, 'Page.onLoad', query);
     },
-    onTapOldPage(){
+    onTapOldPage() {
         wx.navigateTo({
-            url:'/pages/old/index'
+            url: '/pages/old/index'
         });
     }
 });

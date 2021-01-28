@@ -39,7 +39,7 @@ const pageLogger = {
     ...log('onShow', 'onReady', 'onHide', 'onUnload')
 };
 
-export {
+module.exports = {
     appLogger,
     pageLogger
 }

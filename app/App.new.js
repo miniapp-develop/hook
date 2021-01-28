@@ -1,6 +1,5 @@
 import OldApp from './App.old';
-import {_App} from "../libs/miniapp";
-import {appLogger} from '../libs/logger';
+import {_App, appLogger} from '../libs/index';
 
 const newApp = _App.create(OldApp);
 newApp.use(appLogger);

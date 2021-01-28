@@ -1,5 +1,5 @@
 import OldComponent from './Component.old';
-import {_Component} from "../libs/miniapp";
+import {_Component} from '../libs/index';
 
 const newComponent = _Component.create(OldComponent);
 newComponent.use({

@@ -1,6 +1,5 @@
 import OldPage from './Page.old';
-import {_Page} from '../libs/miniapp';
-import {pageLogger} from '../libs/logger';
+import {_Page, pageLogger} from '../libs/index';
 
 const newPage = _Page.create(OldPage);
 newPage.use(pageLogger);
