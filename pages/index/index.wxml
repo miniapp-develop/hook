@@ -6,4 +6,10 @@
     <view class="action" bind:tap="onTapOldPage">
         old page
     </view>
+    <view class="action" bind:tap="onTapCompoundPage">
+        compound page
+    </view>
+    <view class="action" bind:tap="onTapLibPage">
+        lib page
+    </view>
 </view>

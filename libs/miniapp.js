@@ -8,8 +8,8 @@ function create(creator) {
     $App.stack = [];
     $App.init = function (option, creator) {
         let hookedOption = option;
-        this.stack.forEach(ele => {
-            hookedOption = hook(hookedOption, ele);
+        this.stack.forEach(decoration => {
+            hookedOption = hook(hookedOption, decoration);
         });
         return creator(hookedOption);
     };

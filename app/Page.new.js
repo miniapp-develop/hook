@@ -4,10 +4,10 @@ import {_Page, pageLogger} from '../libs/index';
 const newPage = _Page.create(OldPage);
 newPage.use(pageLogger);
 newPage.use({
-    onShow() {
+    onLoad() {
         return {
             before() {
-                console.log('Page.onShow before1', this.oldName);
+                console.log(this.route, 'new Page.onLoad...... before', this.oldName);
             }
         };
     }
@@ -15,7 +15,7 @@ newPage.use({
     onShow() {
         return {
             before() {
-                console.log('Page.onShow before2');
+                console.log(this.route, 'new Page.onShow...... before', this.oldName);
             }
         };
     }

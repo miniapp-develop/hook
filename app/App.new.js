@@ -7,7 +7,7 @@ newApp.use({
     onLaunch() {
         return {
             before() {
-                console.log('App.onLaunch before1', this.oldName);
+                console.log('new App.onLaunch...... before 1', this.oldName);
             }
         };
     }
@@ -15,7 +15,7 @@ newApp.use({
     onLaunch() {
         return {
             before() {
-                console.log('App.onLaunch before2');
+                console.log('new App.onLaunch...... before 2', this.oldName);
             }
         };
     }

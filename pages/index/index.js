@@ -1,5 +1,3 @@
-import {_Page as Page} from '../../app/index';
-
 Page({
     data: {
         key1: 'value1',
@@ -11,6 +9,16 @@ Page({
     onTapOldPage() {
         wx.navigateTo({
             url: '/pages/old/index'
+        });
+    },
+    onTapCompoundPage() {
+        wx.navigateTo({
+            url: '/pages/compound/index'
+        });
+    },
+    onTapLibPage() {
+        wx.navigateTo({
+            url: '/pages/lib/index'
         });
     }
 });

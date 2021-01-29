@@ -1,9 +1,9 @@
-function log(...events) {
+function log(name, events) {
     return events.reduce((t, event) => {
         t[event] = function () {
             return {
                 before() {
-                    console.log(this.route, event);
+                    console.log(this.route, `${name}.${event}`);
                 }
             }
         };
@@ -36,7 +36,7 @@ const pageLogger = {
             }
         }
     },
-    ...log('onShow', 'onReady', 'onHide', 'onUnload')
+    ...log('pageLogger', ['onShow', 'onReady', 'onHide', 'onUnload'])
 };
 
 module.exports = {

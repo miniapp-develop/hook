@@ -3,6 +3,8 @@ function _Component(option) {
         option.externalClasses = []
     }
     option.externalClasses.unshift('ext-class');
+    option.data = option.data || {};
+    option.data.name = 'oldComponent';
     return Component(option);
 }
 

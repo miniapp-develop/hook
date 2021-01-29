@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/compound/index",
+    "pages/lib/index",
     "pages/old/index"
   ],
   "window": {

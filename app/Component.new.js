@@ -5,9 +5,9 @@ const newComponent = _Component.create(OldComponent);
 newComponent.use({
     'methods.onTap': function () {
         return {
-            before() {
+            before(e) {
                 wx.showModal({
-                    content: 'newComponent.onTap'
+                    content: 'newComponent.onTap:' + this.data.name
                 });
             }
         }
