@@ -1,7 +1,7 @@
 {
   "name": "miniapp-hook",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.1.1",
+  "description": "miniapp hook library",
   "miniprogram": "libs",
   "main": "libs/index.js",
   "scripts": {
