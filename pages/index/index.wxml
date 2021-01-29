@@ -7,7 +7,7 @@
         old page
     </view>
     <view class="action" bind:tap="onTapCompoundPage">
-        compound page
+        new page
     </view>
     <view class="action" bind:tap="onTapLibPage">
         lib page

@@ -8,17 +8,17 @@ Page({
     },
     onTapOldPage() {
         wx.navigateTo({
-            url: '/pages/old/index'
+            url: '/pages/old-page/index'
         });
     },
     onTapCompoundPage() {
         wx.navigateTo({
-            url: '/pages/compound/index'
+            url: '/pages/new-page/index'
         });
     },
     onTapLibPage() {
         wx.navigateTo({
-            url: '/pages/lib/index'
+            url: '/pages/lib-page/index'
         });
     }
 });

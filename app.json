@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/compound/index",
-    "pages/lib/index",
-    "pages/old/index"
+    "pages/new-page/index",
+    "pages/lib-page/index",
+    "pages/old-page/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
