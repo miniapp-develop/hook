@@ -1,5 +1,6 @@
 import OldApp from './App.old';
-import {_App, appLogger} from '../libs/index';
+
+const {_App, appLogger} = require('../libs/index');
 
 const newApp = _App.create(OldApp);
 newApp.use(appLogger);

@@ -1,6 +1,6 @@
 # 微信小程序 Hook
 
-hook 小程序的生命周期方法
+hook 小程序组件（App, Page, Component）的生命周期方法。
 
 
 ## Usage
@@ -13,21 +13,23 @@ package.json
 ```json
 {
   "dependencies": {
-    "miniapp-hook": "0.0.2"
+    "miniapp-hook": "0.1.1"
   }
 }
 
 ```
 
+```shell script
     npm install
+```
 
 app.js
 
 ```javascript
-const {App, Page, Component, appLogger, pageLogger} = require('miniapp-hook');
+const { App, Page, Component, appLogger, pageLogger} = require('miniapp-hook');
 
-App.add(appLogger);
-Page.add(pageLogger);
+App.use(appLogger);
+Page.use(pageLogger);
 
 Component.add({
     created() {

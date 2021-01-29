@@ -1,5 +1,6 @@
 import OldPage from './Page.old';
-import {_Page, pageLogger} from '../libs/index';
+
+const {_Page, pageLogger} = require('../libs/index');
 
 const newPage = _Page.create(OldPage);
 newPage.use(pageLogger);

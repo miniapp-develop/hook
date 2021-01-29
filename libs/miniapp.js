@@ -25,8 +25,4 @@ const _App = create(App);
 const _Page = create(Page);
 const _Component = create(Component);
 
-export {
-    _App,
-    _Page,
-    _Component
-}
+module.exports = {_App, _Page, _Component};

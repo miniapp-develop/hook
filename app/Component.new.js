@@ -1,5 +1,6 @@
 import OldComponent from './Component.old';
-import {_Component} from '../libs/index';
+
+const {_Component} = require('../libs/index');
 
 const newComponent = _Component.create(OldComponent);
 newComponent.use({

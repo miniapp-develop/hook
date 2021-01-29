@@ -1,4 +1,4 @@
-import {_Page} from '../../libs/index';
+const {_Page} = require('../../libs/index');
 
 _Page({
     onLoad(query) {
