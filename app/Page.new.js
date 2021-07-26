@@ -1,14 +1,13 @@
 import OldPage from './Page.old';
 
-const {_Page, pageLogger} = require('../libs/index');
+const {_Page} = require('../libs/index');
 
 const newPage = _Page.create(OldPage);
-newPage.use(pageLogger);
 newPage.use({
     onLoad() {
         return {
-            before() {
-                console.log(this.route, 'new Page.onLoad...... before', this.oldName);
+            before(query) {
+                console.log(this.route, 'new Page.onLoad...... before', this.oldName, query);
             }
         };
     }

@@ -7,6 +7,7 @@ newComponent.use({
     'methods.onTap': function () {
         return {
             before(e) {
+                console.log('handle tap:showModal', e);
                 wx.showModal({
                     content: 'newComponent.onTap:' + this.data.name
                 });

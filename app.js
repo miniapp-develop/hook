@@ -1,7 +1,7 @@
 import {_App as App} from "./app/index";
 
 App({
-    onLaunch() {
-        console.log('App.onLaunch');
+    onLaunch(options) {
+        console.log('App.onLaunch', options);
     }
 })
