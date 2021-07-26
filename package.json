@@ -1,7 +1,7 @@
 {
-  "name": "miniapp-hook",
+  "name": "@mini-dev/hook",
   "version": "0.1.1",
-  "description": "miniapp hook library",
+  "description": "miniapp lifecycle hook",
   "miniprogram": "libs",
   "main": "libs/index.js",
   "scripts": {
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:xesam/miniapp-hook.git"
+    "url": "git+git@github.com:miniapp-develop/hook.git"
   },
   "bugs": {
-    "url": "https://github.com/xesam/miniapp-hook"
+    "url": "https://github.com/miniapp-develop/hook"
   },
-  "homepage": "https://github.com/xesam/miniapp-hook",
+  "homepage": "https://github.com/miniapp-develop/hook",
   "dependencies": {
     "@xesam/hook": "0.1.1"
   },
