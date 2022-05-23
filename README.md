@@ -8,19 +8,8 @@ hook 小程序组件（App, Page, Component）的生命周期方法。
 开启微信小程序的 npm 支持：
 [https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)
 
-package.json
-
-```json
-{
-  "dependencies": {
-    "miniapp-hook": "0.1.1"
-  }
-}
-
-```
-
 ```shell script
-    npm install
+    npm install @mini-dev/hook
 ```
 
 ### 配置钩子
@@ -30,10 +19,19 @@ package.json
 app.new.js
 
 ```javascript
-const { _App, _Page, _Component, appLogger, pageLogger} = require('miniapp-hook');
-
-_App.use(appLogger);
-_Page.use(pageLogger);
+const { _App, _Page, _Component} = require('@mini-dev/hook');
+_App.use({
+    onLaunch() {
+        return {
+            before(options) {
+                console.log('new App.onLaunch...... before 1', options);
+            },
+            after(options) {
+                console.log('new App.onLaunch...... after 1', options);
+            }
+        };
+    }
+})
 _Page.use({
     onLoad() {
         return {
@@ -67,13 +65,13 @@ App({
 })
 ```
 
-如果你的小程序原本就已经包装了 App， Page 等框架方法，那么也可以再包装直接使用，已 App 为例：
+如果你的小程序原本就已经包装了 App， Page 等框架方法，那么也可以再包装直接使用，以 App 为例：
 
 app.new.js
 
 ```javascript
 import OldApp from './App.old';
-const { _App } = require('miniapp-hook');
+const { _App } = require('@mini-dev/hook');
 const newApp = _App.create(OldPage); // OldApp 是你自定义的App包装函数
 newApp.use({
     onLaunch() {
