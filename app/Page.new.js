@@ -10,6 +10,19 @@ newPage.use({
                 console.log(this.route, 'new Page.onLoad...... before', this.oldName, query);
             }
         };
+    },
+    onShareAppMessage() {
+        return {
+            after(res, options) {
+                console.log('onShareAppMessage', res)
+                return {
+                    title: '默认分享标题!',
+                    path: '/pages/index/index',
+                    imageUrl: 'https://avatars.githubusercontent.com/u/1892804?v=4',
+                    ...res
+                };
+            }
+        }
     }
 }).use({
     onShow() {

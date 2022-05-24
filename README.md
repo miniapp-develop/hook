@@ -1,6 +1,6 @@
 # 微信小程序 Hook
 
-hook 小程序组件（App, Page, Component）的生命周期方法。
+拦截并增强小程序组件（App, Page, Component）的生命周期方法。
 
 
 ## Usage
@@ -14,7 +14,9 @@ hook 小程序组件（App, Page, Component）的生命周期方法。
 
 ### 配置钩子
 
-由于 App，Page等方法是框架提供的，因此最后必要直接全局的 App，Page 等方式，建议使用包装的方式创建新的函数。一个示例如下：
+由于 App，Page等方法是框架提供的，最好是不要覆盖框架的方法，指不定那天就出问题了。
+
+建议使用包装的方式创建新的函数。一个示例如下：
 
 app.new.js
 
