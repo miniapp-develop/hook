@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/new-page/index",
+    "pages/new-page-no-share/index",
     "pages/lib-page/index",
     "pages/old-page/index"
   ],

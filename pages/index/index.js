@@ -11,9 +11,14 @@ Page({
             url: '/pages/old-page/index'
         });
     },
-    onTapCompoundPage() {
+    onTapNewPage() {
         wx.navigateTo({
             url: '/pages/new-page/index'
+        });
+    },
+    onTapNewPageNoShare() {
+        wx.navigateTo({
+            url: '/pages/new-page-no-share/index'
         });
     },
     onTapLibPage() {

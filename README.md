@@ -28,7 +28,7 @@ _App.use({
             before(options) {
                 console.log('new App.onLaunch...... before 1', options);
             },
-            after(options) {
+            after(res, options) {
                 console.log('new App.onLaunch...... after 1', options);
             }
         };

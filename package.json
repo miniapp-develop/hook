@@ -1,6 +1,6 @@
 {
   "name": "@mini-dev/hook",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "miniapp lifecycle hook",
   "miniprogram": "libs",
   "main": "libs/index.js",
@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/miniapp-develop/hook",
   "dependencies": {
-    "@xesam/hook": "0.1.4"
+    "@xesam/hook": "0.1.5"
   },
   "devDependencies": {
     "jest": "26.1.0"
