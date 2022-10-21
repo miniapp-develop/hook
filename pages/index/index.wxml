@@ -2,7 +2,9 @@
     <view class="header">
         hello miniapp-hook
     </view>
-    <foo ext-class="custom-class"/>
+    <foo-new old-class="custom-class"/>
+    <foo-default old-class="custom-class"/>
+
     <view class="action" bind:tap="onTapOldPage">
         OldPage
     </view>

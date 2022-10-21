@@ -1,2 +1,0 @@
-<view class="action old-class" bind:tap="onTap">foo.onTap</view>
-<view class="action old-class" bind:tap="onTapInner">foo.onTapInner</view>
