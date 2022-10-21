@@ -2,12 +2,12 @@ import OldPage from './Page.old';
 
 const {_Page} = require('../libs/index');
 
-const newPage = _Page.create(OldPage);
-newPage.use({
+const NewPage = _Page.create(OldPage);
+NewPage.use({
     onLoad() {
         return {
             before(query) {
-                console.log(this.route, 'new Page.onLoad...... before', this.oldName, query);
+                console.log(this.route, 'NewPage.onLoad...... before', this.oldName, query);
             }
         };
     },
@@ -15,7 +15,7 @@ newPage.use({
         if (page.onShareAppMessage) {
             return {
                 after(res, options) {
-                    console.log('onShareAppMessage', res)
+                    console.log('NewPage.onShareAppMessage', res)
                     return {
                         title: '默认分享标题!',
                         path: '/pages/index/index',
@@ -42,9 +42,9 @@ newPage.use({
     onShow() {
         return {
             before() {
-                console.log(this.route, 'new Page.onShow...... before', this.oldName);
+                console.log(this.route, 'NewPage.onShow...... before', this.oldName);
             }
         };
     }
 });
-export default newPage;
+export default NewPage;

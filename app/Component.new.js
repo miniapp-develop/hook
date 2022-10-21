@@ -2,17 +2,17 @@ import OldComponent from './Component.old';
 
 const {_Component} = require('../libs/index');
 
-const newComponent = _Component.create(OldComponent);
-newComponent.use({
+const NewComponent = _Component.create(OldComponent);
+NewComponent.use({
     'methods.onTap': function () {
         return {
             before(e) {
-                console.log('handle tap:showModal', e);
+                console.log('NewComponent methods.onTap:showModal', e);
                 wx.showModal({
-                    content: 'newComponent.onTap:' + this.data.name
+                    content: 'NewComponent methods.onTap:' + this.data.name
                 });
             }
         }
     }
 });
-export default newComponent;
+export default NewComponent;

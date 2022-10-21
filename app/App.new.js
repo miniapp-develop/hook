@@ -2,15 +2,15 @@ import OldApp from './App.old';
 
 const {_App} = require('../libs/index');
 
-const newApp = _App.create(OldApp);
-newApp.use({
+const NewApp = _App.create(OldApp);
+NewApp.use({
     onLaunch() {
         return {
             before(options) {
-                console.log('new App.onLaunch...... before 1', this.oldName, options);
+                console.log('NewApp.onLaunch. before 1', this.oldName, options);
             },
             after(options) {
-                console.log('new App.onLaunch...... after 1', this.oldName, options);
+                console.log('NewApp.onLaunch. after 1', this.oldName, options);
             }
         };
     }
@@ -18,9 +18,9 @@ newApp.use({
     onLaunch() {
         return {
             before(options) {
-                console.log('new App.onLaunch...... before 2', this.oldName, options);
+                console.log('NewApp.onLaunch. before 2', this.oldName, options);
             }
         };
     }
 });
-export default newApp;
+export default NewApp;

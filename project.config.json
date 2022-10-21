@@ -47,9 +47,9 @@
     "minifyWXML": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.24.3",
+  "libVersion": "2.12.3",
   "appid": "wx132bb522ad967270",
-  "projectname": "miniapp-hook",
+  "projectname": "mini-dev/hook",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {},

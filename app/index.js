@@ -1,10 +1,10 @@
-import newApp from "./App.new";
-import newPage from "./Page.new";
-import newComponent from "./Component.new";
+import NewApp from "./App.new";
+import NewPage from "./Page.new";
+import NewComponent from "./Component.new";
 
 export {
-    newApp as _App,
-    newPage as _Page,
-    newComponent as _Component
+    NewApp as _App,
+    NewPage as _Page,
+    NewComponent as _Component
 }
 

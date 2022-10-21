@@ -1,6 +1,6 @@
 {
   "name": "@mini-dev/hook",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "miniapp lifecycle hook",
   "miniprogram": "libs",
   "main": "libs/index.js",

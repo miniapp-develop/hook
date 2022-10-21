@@ -1,11 +1,11 @@
-function _Component(option) {
+function OldComponent(option) {
     if (!option.externalClasses) {
         option.externalClasses = []
     }
-    option.externalClasses.unshift('ext-class');
+    option.externalClasses.unshift('old-class');
     option.data = option.data || {};
-    option.data.name = 'oldComponent';
+    option.data.name = 'OldComponent';
     return Component(option);
 }
 
-export default _Component;
+export default OldComponent;
