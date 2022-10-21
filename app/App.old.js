@@ -1,4 +1,4 @@
-function _App(option) {
+function OldApp(option) {
     option.oldName = 'oldAppName';
     const old = option.onLaunch;
     option.onLaunch = function (option) {
@@ -8,4 +8,4 @@ function _App(option) {
     return App(option);
 }
 
-export default _App;
+export default OldApp;

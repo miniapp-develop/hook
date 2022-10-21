@@ -1,8 +1,8 @@
 const {hook} = require('@xesam/hook');
 
-function create(creator) {
+function create(constructor) {
     function $App(option) {
-        return $App.init(option, creator);
+        return $App.init(option, constructor);
     }
 
     $App.stack = [];
