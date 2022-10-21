@@ -7,7 +7,6 @@ NewPage.use({
     onLoad(query) {
         return {
             before() {
-                debugger
                 console.log('NewPage.onLoad before', this.route, this.date, query);
             }
         };
@@ -38,6 +37,13 @@ NewPage.use({
                 }
             }
         }
+    },
+    onTap(e) {
+        return {
+            before() {
+                console.log('NewApp.onTap', e);
+            }
+        };
     }
 }).use({
     onShow() {

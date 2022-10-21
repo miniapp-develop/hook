@@ -2,4 +2,7 @@
     <view class="header">
         New Page（支持分享）
     </view>
+    <view>
+        <button bind:tap="onTap">onTap</button>
+    </view>
 </view>
