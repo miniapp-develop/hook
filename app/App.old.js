@@ -1,9 +1,9 @@
 function _App(option) {
     option.oldName = 'oldAppName';
     const old = option.onLaunch;
-    option.onLaunch = function (query) {
-        console.log('OldApp.onLaunch......');
-        old.call(this, query);
+    option.onLaunch = function (option) {
+        console.log('OldApp.onLaunch', this.oldName, option);
+        old.call(this, option);
     }
     return App(option);
 }

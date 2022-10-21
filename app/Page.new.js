@@ -4,10 +4,11 @@ const {_Page} = require('../libs/index');
 
 const NewPage = _Page.create(OldPage);
 NewPage.use({
-    onLoad() {
+    onLoad(query) {
         return {
-            before(query) {
-                console.log(this.route, 'NewPage.onLoad...... before', this.oldName, query);
+            before() {
+                debugger
+                console.log('NewPage.onLoad before', this.route, this.date, query);
             }
         };
     },
@@ -42,7 +43,7 @@ NewPage.use({
     onShow() {
         return {
             before() {
-                console.log(this.route, 'NewPage.onShow...... before', this.oldName);
+                console.log('NewPage.onShow before', this.route, this.data);
             }
         };
     }

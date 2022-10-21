@@ -4,13 +4,13 @@
     </view>
     <foo ext-class="custom-class"/>
     <view class="action" bind:tap="onTapOldPage">
-        old page
+        OldPage
     </view>
     <view class="action" bind:tap="onTapNewPage">
         NewPage
     </view>
     <view class="action" bind:tap="onTapNewPageNoShare">
-        NewPageNoShare
+        NewPageWithoutShare
     </view>
     <view class="action" bind:tap="onTapLibPage">
         lib page

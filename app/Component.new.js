@@ -4,9 +4,9 @@ const {_Component} = require('../libs/index');
 
 const NewComponent = _Component.create(OldComponent);
 NewComponent.use({
-    'methods.onTap': function () {
+    'methods.onTap': function (e) {
         return {
-            before(e) {
+            before() {
                 console.log('NewComponent methods.onTap:showModal', e);
                 wx.showModal({
                     content: 'NewComponent methods.onTap:' + this.data.name

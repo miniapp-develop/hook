@@ -4,7 +4,7 @@ Page({
         key2: 'value2'
     },
     onLoad(query) {
-        console.log(this.route, 'Page.onLoad', query);
+        console.log('Page.onLoad', this.route, this.data, query);
     },
     onTapOldPage() {
         wx.navigateTo({

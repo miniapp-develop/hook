@@ -4,21 +4,21 @@ const {_App} = require('../libs/index');
 
 const NewApp = _App.create(OldApp);
 NewApp.use({
-    onLaunch() {
+    onLaunch(options) {
         return {
-            before(options) {
-                console.log('NewApp.onLaunch. before 1', this.oldName, options);
+            before() {
+                console.log('NewApp.onLaunch before 1', this.oldName, options);
             },
-            after(options) {
-                console.log('NewApp.onLaunch. after 1', this.oldName, options);
+            after() {
+                console.log('NewApp.onLaunch after 1', this.oldName, options);
             }
         };
     }
 }).use({
-    onLaunch() {
+    onLaunch(options) {
         return {
-            before(options) {
-                console.log('NewApp.onLaunch. before 2', this.oldName, options);
+            before() {
+                console.log('NewApp.onLaunch before 2', this.oldName, options);
             }
         };
     }

@@ -1,1 +1,2 @@
-<view class="action ext-class" bind:tap="onTap">Component@foo</view>
+<view class="action old-class" bind:tap="onTap">foo.onTap</view>
+<view class="action old-class" bind:tap="onTapInner">foo.onTapInner</view>
