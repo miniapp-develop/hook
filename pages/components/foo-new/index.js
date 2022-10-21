@@ -13,6 +13,7 @@ Component({
         },
 
         onTapInner(e) {
+            console.log(this);
             console.log(this.$_name_);
             console.log(this.data.$_name_);
             console.log('foo-new onTapInner', e);
