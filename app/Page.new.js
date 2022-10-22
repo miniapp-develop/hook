@@ -7,7 +7,7 @@ NewPage.use({
     onLoad(page) {
         return {
             before(query) {
-                console.log('NewPage.onLoad before', this.route, this.date, query);
+                console.log('NewPage.onLoad before', this.route, this.data, query);
             }
         };
     },
@@ -15,7 +15,7 @@ NewPage.use({
         if (this.onShareAppMessage) {
             return {
                 afterReturn(result, {from, target, webViewUrl}) {
-                    console.log('NewPage.onShareAppMessage', result)
+                    console.log('Page.onShareAppMessage', result)
                     return {
                         title: '默认分享标题!',
                         path: '/pages/index/index',
@@ -38,10 +38,18 @@ NewPage.use({
             }
         }
     },
-    onTap(e) {
+    getPageInfo: {
+        afterReturn(result) {
+            return {
+                NewPage: 'NewPage',
+                ...result
+            }
+        }
+    },
+    onTap(host) {
         return {
-            before() {
-                console.log('NewApp.onTap', e);
+            before(e) {
+                console.log('NewApp.onTap', this.getPageInfo(), host, e);
             }
         };
     }
