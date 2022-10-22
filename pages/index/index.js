@@ -11,14 +11,19 @@ Page({
             url: '/pages/old-page/index'
         });
     },
-    onTapNewPage() {
+    onTapNewPageWithoutShare() {
         wx.navigateTo({
-            url: '/pages/new-page/index'
+            url: '/pages/new-page-without-share/index'
         });
     },
-    onTapNewPageNoShare() {
+    onTapNewPageWithDefaultShare() {
         wx.navigateTo({
-            url: '/pages/new-page-no-share/index'
+            url: '/pages/new-page-with-default-share/index'
+        });
+    },
+    onTapNewPageWithCustomShare() {
+        wx.navigateTo({
+            url: '/pages/new-page-with-custom-share/index'
         });
     },
     onTapLibPage() {

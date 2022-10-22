@@ -1,6 +1,6 @@
 <view class="container">
     <view class="header">
-        hello miniapp-hook
+        Hello @mini-dev/hook
     </view>
     <foo-new old-class="custom-class"/>
     <foo-default old-class="custom-class"/>
@@ -8,11 +8,14 @@
     <view class="action" bind:tap="onTapOldPage">
         OldPage
     </view>
-    <view class="action" bind:tap="onTapNewPage">
-        NewPage
-    </view>
-    <view class="action" bind:tap="onTapNewPageNoShare">
+    <view class="action" bind:tap="onTapNewPageWithoutShare">
         NewPageWithoutShare
+    </view>
+    <view class="action" bind:tap="onTapNewPageWithDefaultShare">
+        NewPageWithDefaultShare
+    </view>
+    <view class="action" bind:tap="onTapNewPageWithCustomShare">
+        NewPageWithCustomShare
     </view>
     <view class="action" bind:tap="onTapLibPage">
         lib page

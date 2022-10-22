@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/new-page/index",
-    "pages/new-page-no-share/index",
+    "pages/new-page-without-share/index",
+    "pages/new-page-with-default-share/index",
+    "pages/new-page-with-custom-share/index",
     "pages/lib-page/index",
     "pages/old-page/index"
   ],

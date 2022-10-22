@@ -4,23 +4,23 @@ const {_Page} = require('../libs/index');
 
 const NewPage = _Page.create(OldPage);
 NewPage.use({
-    onLoad(query) {
+    onLoad(page) {
         return {
-            before() {
+            before(query) {
                 console.log('NewPage.onLoad before', this.route, this.date, query);
             }
         };
     },
     onShareAppMessage(page) {
-        if (page.onShareAppMessage) {
+        if (this.onShareAppMessage) {
             return {
-                after(res, options) {
-                    console.log('NewPage.onShareAppMessage', res)
+                afterReturn(result, {from, target, webViewUrl}) {
+                    console.log('NewPage.onShareAppMessage', result)
                     return {
                         title: '默认分享标题!',
                         path: '/pages/index/index',
                         imageUrl: 'https://avatars.githubusercontent.com/u/1892804?v=4',
-                        ...res
+                        ...result
                     };
                 }
             }
@@ -28,7 +28,7 @@ NewPage.use({
             return false;
         } else { // 默认分享
             return {
-                after() {
+                afterReturn() {
                     return {
                         title: '默认分享标题!',
                         path: '/pages/index/index',
