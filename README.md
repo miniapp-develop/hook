@@ -22,22 +22,22 @@ app.new.js
 ```javascript
 const { _App, _Page, _Component} = require('@mini-dev/hook');
 _App.use({
-    onLaunch(option) {
+    onLaunch(host) { //host is App
         return {
-            before() {
+            before(options) {
                 console.log('App.onLaunch...... before 1', options);
             },
-            after(res, options) {
-                console.log('App.onLaunch...... after 1', options);
+            afterReturn(res, options) {
+                console.log('App.onLaunch...... afterReturn 1', options);
             }
         };
     }
 })
 
 _Page.use({
-    onLoad(query) {
+    onLoad(host) { //host is page
         return {
-            before() {
+            before(query) {
                 console.log(this.route, 'Page.onLoad...... before', this.data, query);
             }
         };
@@ -45,9 +45,9 @@ _Page.use({
 });
 
 _Component.use({
-    'methods.onTap': function (e) {
+    'methods.onTap': function (host) { //host is Component
       return {
-          before() {
+          before(e) {
               wx.showModal({
                   content: 'newComponent.onTap'
               });
@@ -77,9 +77,9 @@ import OldApp from './App.old';
 const { _App } = require('@mini-dev/hook');
 const newApp = _App.create(OldApp); // OldApp 是你自定义的App包装函数
 newApp.use({
-    onLaunch(option) {
+    onLaunch() {
         return {
-            before() {
+            before(option) {
                 console.log('App.onLaunch...... before 1', this.data, option);
             }
         };
@@ -101,7 +101,7 @@ App({
 pages/sample/index.js
 
 ```javascript
-import {_Page as Page} from './app.new';
+import {_Page as Page} from './page.new';
 Page({
     onLoad () {
     }

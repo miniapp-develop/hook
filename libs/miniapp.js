@@ -1,24 +1,24 @@
 const {hook} = require('@xesam/hook');
 
 function create(constructor) {
-    function $App(option) {
-        return $App.init(option, constructor);
+    function $Constructor(option) {
+        return $Constructor.init(option, constructor);
     }
 
-    $App.stack = [];
-    $App.init = function (option, creator) {
+    $Constructor.stack = [];
+    $Constructor.init = function (option, creator) {
         let hookedOption = option;
         this.stack.forEach(decoration => {
             hookedOption = hook(hookedOption, decoration);
         });
         return creator(hookedOption);
     };
-    $App.use = function (decoration) {
+    $Constructor.use = function (decoration) {
         this.stack.push(decoration);
         return this;
     };
-    $App.create = create;
-    return $App;
+    $Constructor.create = create;
+    return $Constructor;
 }
 
 const _App = create(App);
