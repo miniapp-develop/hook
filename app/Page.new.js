@@ -12,7 +12,7 @@ NewPage.use({
         };
     },
     onShareAppMessage(page) {
-        if (this.onShareAppMessage) {
+        if (this.onShareAppMessage) { // 如果原来的页面配置框架的分享回调，则拦截
             return {
                 afterReturn(result, {from, target, webViewUrl}) {
                     console.log('Page.onShareAppMessage', result)
@@ -24,16 +24,19 @@ NewPage.use({
                     };
                 }
             }
-        } else if (page.shareExcluded) { // 强制关闭分享
-            return false;
-        } else { // 默认分享
-            return {
-                afterReturn() {
-                    return {
-                        title: '默认分享标题!',
-                        path: '/pages/index/index',
-                        imageUrl: 'https://avatars.githubusercontent.com/u/1892804?v=4'
-                    };
+        } else { // 页面没有配置框架的分享回调
+            if (page.shareExcluded) { // 不需要自动注入回调
+                return false;
+            } else { //自动注入分享回调
+                return {
+                    afterReturn(result, res) {
+                        console.log('Page.onShareAppMessage', result)
+                        return {
+                            title: '默认分享标题!',
+                            path: '/pages/index/index',
+                            imageUrl: 'https://avatars.githubusercontent.com/u/1892804?v=4'
+                        };
+                    }
                 }
             }
         }

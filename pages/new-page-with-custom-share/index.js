@@ -1,6 +1,7 @@
 import {_Page as Page} from '../../app/index';
 
 Page({
+    __name__: 'page_with_custom_share',
     data: {
         name: 'new-page-with-custom-share'
     },
@@ -9,7 +10,7 @@ Page({
     },
     onShareAppMessage({from, target, webViewUrl}) {
         return {
-            title: '页面内配置的标题',
+            title: '页面内自定义的标题',
         };
     },
     getPageInfo() {
