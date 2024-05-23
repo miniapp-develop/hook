@@ -1,6 +1,6 @@
 import OldPage from './Page.old';
 
-const {_Page} = require('../libs/index');
+const {_Page} = require('@mini-dev/hook');
 
 const NewPage = _Page.create(OldPage);
 NewPage.use({

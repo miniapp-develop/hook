@@ -20,7 +20,7 @@
 app.new.js
 
 ```javascript
-const { _App, _Page, _Component} = require('@mini-dev/hook');
+const {_App, _Page, _Component} = require('@mini-dev/hook');
 _App.use({
     onLaunch(host) { //host is App
         return {
@@ -46,13 +46,13 @@ _Page.use({
 
 _Component.use({
     'methods.onTap': function (host) { //host is Component
-      return {
-          before(e) {
-              wx.showModal({
-                  content: 'newComponent.onTap'
-              });
-          }
-      }
+        return {
+            before(e) {
+                wx.showModal({
+                    content: 'newComponent.onTap'
+                });
+            }
+        }
     }
 });
 
@@ -62,8 +62,9 @@ app.js
 
 ```javascript
 import {_App as App} from './app.new';
+
 App({
-    onLaunch () {
+    onLaunch() {
     }
 })
 ```
@@ -74,7 +75,8 @@ app.new.js
 
 ```javascript
 import OldApp from './App.old';
-const { _App } = require('@mini-dev/hook');
+
+const {_App} = require('@mini-dev/hook');
 const newApp = _App.create(OldApp); // OldApp 是你自定义的App包装函数
 newApp.use({
     onLaunch() {
@@ -92,8 +94,9 @@ app.js
 
 ```javascript
 import {_App as App} from './app.new';
+
 App({
-    onLaunch () {
+    onLaunch() {
     }
 })
 ```
@@ -102,13 +105,19 @@ pages/sample/index.js
 
 ```javascript
 import {_Page as Page} from './page.new';
+
 Page({
-    onLoad () {
+    onLoad() {
     }
 })
 ```
 
 ### ChangeLogs
 
+#### 0.2.1
+
+ing...
+
 #### 0.2.0
+
 1. 修正示例代码。

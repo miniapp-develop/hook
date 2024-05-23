@@ -1,4 +1,4 @@
-const {_Page} = require('../../libs/index');
+const {_Page} = require('@mini-dev/hook');
 
 _Page({
     onLoad(query) {

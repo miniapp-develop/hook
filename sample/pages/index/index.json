@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "foo-new": "/pages/components/foo-new/index",
+    "foo-default": "/pages/components/foo-default/index"
+  }
+}

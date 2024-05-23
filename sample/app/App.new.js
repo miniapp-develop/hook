@@ -1,6 +1,6 @@
 import OldApp from './App.old';
 
-const {_App} = require('../libs/index');
+const {_App} = require('@mini-dev/hook');
 
 const NewApp = _App.create(OldApp);
 NewApp.use({

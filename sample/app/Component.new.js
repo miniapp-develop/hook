@@ -1,6 +1,6 @@
 import OldComponent from './Component.old';
 
-const {_Component} = require('../libs/index');
+const {_Component} = require('@mini-dev/hook');
 
 const NewComponent = _Component.create(OldComponent);
 NewComponent.use({

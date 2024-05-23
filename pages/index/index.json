@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "foo-new": "../components/foo-new/index",
-    "foo-default": "../components/foo-default/index"
-  }
-}

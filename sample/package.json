@@ -1,0 +1,16 @@
+{
+  "name": "miniapp-hook-sample",
+  "version": "0.2.1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@mini-dev/hook": "0.2.1",
+    "@xesam/hook": "^0.1.6"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

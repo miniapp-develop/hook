@@ -7,4 +7,3 @@ export {
     NewPage as _Page,
     NewComponent as _Component
 }
-
