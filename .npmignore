@@ -1,13 +1,11 @@
-pages
-app
-app.*
+sample
 project.config.json
 project.private.config.json
 package-lock.json
 node_modules
-miniprogram_npm
-sitemap.json
 .idea
 *.iml
 test
 __test__
+.eslintrc.cjs
+.prettierrc.json

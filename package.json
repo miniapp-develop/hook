@@ -1,7 +1,7 @@
 {
     "name": "@mini-dev/hook",
     "version": "0.3.0",
-    "description": "miniapp lifecycle hook",
+    "description": "miniapp framework methods(App, Page, Component) hook",
     "miniprogram": "libs",
     "main": "libs/index.js",
     "scripts": {
@@ -21,7 +21,16 @@
     "devDependencies": {
         "jest": "29.7.0"
     },
-    "keywords": [],
+    "keywords": [
+        "微信",
+        "小程序",
+        "miniapp",
+        "hook",
+        "lifecycle",
+        "App",
+        "Page",
+        "Component"
+    ],
     "author": "xesam",
     "license": "ISC"
 }

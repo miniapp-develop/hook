@@ -54,9 +54,21 @@
   "projectname": "mini-dev/hook",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
-  "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "全局挂载",
+          "pathName": "pages/index/index",
+          "query": "mode=mount",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }
