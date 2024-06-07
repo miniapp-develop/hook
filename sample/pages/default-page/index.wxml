@@ -1,5 +1,5 @@
 <view class="container">
     <view class="header">
-        Old Page
+        DefaultPage({})
     </view>
 </view>

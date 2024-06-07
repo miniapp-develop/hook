@@ -1,5 +1,5 @@
 <view class="container">
     <view class="header">
-        Lib Page
+        mini_dev_hook._Page({})
     </view>
 </view>

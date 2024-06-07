@@ -1,6 +1,6 @@
 <view class="container">
     <view class="header">
-        Hello @mini-dev/hook
+        @mini-dev/hook
     </view>
     <foo-default old-class="custom-class"/>
     <foo-new old-class="custom-class"/>
