@@ -1,2 +1,40 @@
-const {_App, _Page, _Component} = require('./miniapp');
-module.exports = {_App, _Page, _Component};
+const { hook } = require('@xesam/hook');
+
+function create(constructor) {
+    const _origin = constructor;
+    function $Constructor(option) {
+        return $Constructor.init(option, _origin);
+    }
+
+    $Constructor.stack = [];
+    $Constructor.init = function (option, creator) {
+        let hookedOption = option;
+        this.stack.forEach((decoration) => {
+            hookedOption = hook(hookedOption, decoration);
+        });
+        return creator(hookedOption);
+    };
+    $Constructor.use = function (decoration) {
+        this.stack.push(decoration);
+        return this;
+    };
+    $Constructor.mount = function (name, host) {
+        const actualName = name || _origin.name;
+        const actualHost = host || globalThis;
+        Object.defineProperty(actualHost, actualName, {
+            value: this,
+            writable: false,
+            enumerable: true,
+            configurable: true
+        });
+        return this;
+    };
+    $Constructor.create = create;
+    return $Constructor;
+}
+
+const _App = create(App);
+const _Page = create(Page);
+const _Component = create(Component);
+
+module.exports = { _App, _Page, _Component };

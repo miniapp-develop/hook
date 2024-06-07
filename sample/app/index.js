@@ -17,10 +17,10 @@ const NewApp = MiniHook._App
         onLaunch(host) {
             return {
                 before(options) {
-                    console.log('NewApp.onLaunch before-1', this.oldName, options);
+                    console.log('[NewApp].onLaunch before-1', this.oldName, options);
                 },
                 afterReturn(result, options) {
-                    console.log('NewApp.onLaunch afterReturn', this.oldName, options);
+                    console.log('[NewApp].onLaunch afterReturn', this.oldName, options);
                 }
             };
         }
@@ -29,7 +29,7 @@ const NewApp = MiniHook._App
         onLaunch(host) {
             return {
                 before(options) {
-                    console.log('NewApp.onLaunch before-2', this.oldName, options);
+                    console.log('[NewApp].onLaunch before-2', this.oldName, options);
                 }
             };
         }
@@ -40,7 +40,7 @@ function OldPage(option) {
     option.oldName = 'OldPageName';
     const old = option.onLoad;
     option.onLoad = function (query) {
-        console.log('OldPage.onLoad', this.route, this.data, query);
+        console.log('[OldPage].onLoad', this.route, this.data, query);
         old.call(this, query);
     };
     return _OriginPage(option);
@@ -52,7 +52,7 @@ const NewPage = MiniHook._Page
         onLoad(page) {
             return {
                 before(query) {
-                    console.log('NewPage.onLoad before', this.route, this.data, query);
+                    console.log('[NewPage].onLoad before', this.route, this.data, query);
                 }
             };
         },
@@ -61,7 +61,7 @@ const NewPage = MiniHook._Page
                 // 如果原来的页面配置框架的分享回调，则拦截
                 return {
                     afterReturn(result, { from, target, webViewUrl }) {
-                        console.log('Page.onShareAppMessage', result);
+                        console.log('[Page].onShareAppMessage', result);
                         return {
                             title: '默认分享标题!',
                             path: '/pages/index/index',
@@ -79,7 +79,7 @@ const NewPage = MiniHook._Page
                     //自动注入分享回调
                     return {
                         afterReturn(result, res) {
-                            console.log('Page.onShareAppMessage', result);
+                            console.log('[Page].onShareAppMessage', result);
                             return {
                                 title: '默认分享标题!',
                                 path: '/pages/index/index',
@@ -101,7 +101,7 @@ const NewPage = MiniHook._Page
         onTap(host) {
             return {
                 before(e) {
-                    console.log('NewApp.onTap', this.getPageInfo(), host, e);
+                    console.log('[NewApp].onTap', this.getPageInfo(), host, e);
                 }
             };
         }
@@ -110,7 +110,7 @@ const NewPage = MiniHook._Page
         onShow() {
             return {
                 before() {
-                    console.log('NewPage.onShow before', this.route, this.data);
+                    console.log('[NewPage].onShow before', this.route, this.data);
                 }
             };
         }
@@ -131,7 +131,7 @@ const NewComponent = MiniHook._Component.create(OldComponent).use({
     'methods.onTap': function (host) {
         return {
             before(e) {
-                console.log('NewComponent methods.onTap:showModal', e);
+                console.log('[NewComponent].onTap:showModal', e);
                 wx.showModal({
                     content: 'NewComponent methods.onTap:' + this.data.name
                 });
@@ -140,8 +140,5 @@ const NewComponent = MiniHook._Component.create(OldComponent).use({
     }
 });
 
-// Object.defineProperty(globalThis, 'App', { value: NewApp });
-// Object.defineProperty(globalThis, 'Page', { value: NewPage });
-// Object.defineProperty(globalThis, 'Component', { value: NewComponent });
+export { NewApp, NewComponent, NewPage, OldApp, OldComponent, OldPage };
 
-export { NewApp as _App, NewPage as _Page, NewComponent as _Component, OldApp, NewApp, OldPage, NewPage, OldComponent, NewComponent };
