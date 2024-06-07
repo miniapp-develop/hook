@@ -9,6 +9,6 @@ if (launchOptions.query.mode === 'mount') {
 App({
     $_name_: 'mini-dev/hook',
     onLaunch(options) {
-        console.log('App.onLaunch', this.$_name_, options);
+        console.log('[App].onLaunch', this.$_name_, options);
     }
 });

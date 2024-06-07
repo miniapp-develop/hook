@@ -6,18 +6,18 @@
     <foo-default old-class="custom-class"/>
 
     <view class="action" bind:tap="onTapOldPage">
-        OldPage
+        DefaultPage 使用框架的原始 Page
     </view>
     <view class="action" bind:tap="onTapNewPageWithoutShare">
-        NewPageWithoutShare
+        NewPage 未启用分享
     </view>
     <view class="action" bind:tap="onTapNewPageWithDefaultShare">
-        NewPageWithDefaultShare
+        NewPage 启用默认分享
     </view>
     <view class="action" bind:tap="onTapNewPageWithCustomShare">
-        NewPageWithCustomShare
+        NewPage 启用自定义分享
     </view>
     <view class="action" bind:tap="onTapLibPage">
-        lib page
+        LibPage 使用库里面的 _Page
     </view>
 </view>

@@ -1,5 +1,6 @@
 .action {
     padding: 24rpx;
     text-align: center;
-    background: #e4e4e4;
+    border: 1rpx solid #1485ee;
+    margin: 0.5em;
 }

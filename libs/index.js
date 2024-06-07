@@ -37,4 +37,4 @@ const _App = create(App);
 const _Page = create(Page);
 const _Component = create(Component);
 
-module.exports = { _App, _Page, _Component };
+module.exports = { create, _App, _Page, _Component };

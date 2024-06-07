@@ -7,16 +7,16 @@ NewComponent({
     },
     methods: {
         onTap(e) {
-            console.log(this.$_name_);
-            console.log(this.data.$_name_);
-            console.log('foo-new onTap', e);
+            console.log('[NewComponent]', this.$_name_);
+            console.log('[NewComponent]', this.data.$_name_);
+            console.log('[NewComponent]', 'foo-new onTap', e);
         },
 
         onTapInner(e) {
-            console.log(this);
-            console.log(this.$_name_);
-            console.log(this.data.$_name_);
-            console.log('foo-new onTapInner', e);
+            console.log('[NewComponent]', this);
+            console.log('[NewComponent]', this.$_name_);
+            console.log('[NewComponent]', this.data.$_name_);
+            console.log('[NewComponent]', 'foo-new onTapInner', e);
         }
     }
 });

@@ -2,17 +2,17 @@ const MiniHook = require('@mini-dev/hook');
 
 const _OriginApp = App;
 
-function OldApp(option) {
-    option.oldName = 'oldAppName';
+function DefaultApp(option) {
+    option.oldName = 'DefaultApp';
     const old = option.onLaunch;
     option.onLaunch = function (option) {
-        console.log('OldApp.onLaunch', this.oldName, option);
+        console.log('[DefaultApp].onLaunch', this.oldName, option);
         old.call(this, option);
     };
     return _OriginApp(option);
 }
 const NewApp = MiniHook._App
-    .create(OldApp)
+    .create(DefaultApp)
     .use({
         onLaunch(host) {
             return {
@@ -36,18 +36,18 @@ const NewApp = MiniHook._App
     });
 
 const _OriginPage = Page;
-function OldPage(option) {
-    option.oldName = 'OldPageName';
+function DefaultPage(option) {
+    option.oldName = 'DefaultPageName';
     const old = option.onLoad;
     option.onLoad = function (query) {
-        console.log('[OldPage].onLoad', this.route, this.data, query);
+        console.log('[DefaultPage].onLoad', this.route, this.data, query);
         old.call(this, query);
     };
     return _OriginPage(option);
 }
 
 const NewPage = MiniHook._Page
-    .create(OldPage)
+    .create(DefaultPage)
     .use({
         onLoad(page) {
             return {
@@ -117,17 +117,17 @@ const NewPage = MiniHook._Page
     });
 
 const _OriginComponent = Component;
-function OldComponent(option) {
+function DefaultComponent(option) {
     if (!option.externalClasses) {
         option.externalClasses = [];
     }
     option.externalClasses.unshift('old-class');
     option.data = option.data || {};
-    option.data.name = 'OldComponent';
+    option.data.name = 'DefaultComponent';
     return _OriginComponent(option);
 }
 
-const NewComponent = MiniHook._Component.create(OldComponent).use({
+const NewComponent = MiniHook._Component.create(DefaultComponent).use({
     'methods.onTap': function (host) {
         return {
             before(e) {
@@ -140,5 +140,4 @@ const NewComponent = MiniHook._Component.create(OldComponent).use({
     }
 });
 
-export { NewApp, NewComponent, NewPage, OldApp, OldComponent, OldPage };
-
+export { NewApp, NewComponent, NewPage, DefaultApp, DefaultPage, DefaultComponent };

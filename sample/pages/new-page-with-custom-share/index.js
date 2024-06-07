@@ -6,7 +6,7 @@ NewPage({
         name: 'new-page-with-custom-share'
     },
     onLoad(query) {
-        console.log('Page.onLoad', this.route, this.data, query);
+        console.log('[Page].onLoad', this.route, this.data, query);
     },
     onShareAppMessage({from, target, webViewUrl}) {
         return {

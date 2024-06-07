@@ -1,7 +1,7 @@
-import { OldPage } from '../../app/index';
+import { DefaultPage } from '../../app/index';
 
-OldPage({
+DefaultPage({
     onLoad(query) {
-        console.log('Page.onLoad', this.route, query);
+        console.log('[Page].onLoad', this.route, query);
     }
 });
