@@ -5,16 +5,16 @@ Component({
     },
     methods: {
         onTap(e) {
-            console.log('[Component]', this.$_name_);
-            console.log('[Component]', this.data.$_name_);
-            console.log('[Component]foo-default onTap', e);
+            console.log('[Component] this.$_name_ =', this.$_name_);
+            console.log('[Component] this.data.$_name_ =', this.data.$_name_);
+            console.log('[Component] foo-default onTap', e);
         },
 
         onTapInner(e) {
             console.log('[Component]', this);
-            console.log('[Component]', this.$_name_);
-            console.log('[Component]', this.data.$_name_);
-            console.log('[Component]foo-default onTapInner', e);
+            console.log('[Component] this.$_name_ =', this.$_name_);
+            console.log('[Component] this.data.$_name_ =', this.data.$_name_);
+            console.log('[Component] foo-default onTapInner', e);
         }
     }
 });

@@ -6,9 +6,19 @@ Page({
     onLoad(query) {
         console.log('[Page].onLoad', this.route, this.data, query);
     },
-    onTapOldPage() {
+    onTapOriginPage() {
         wx.navigateTo({
-            url: '/pages/old-page/index'
+            url: '/pages/origin-page/index'
+        });
+    },
+    onTapLibPage() {
+        wx.navigateTo({
+            url: '/pages/lib-page/index'
+        });
+    },
+    onTapDefaultPage() {
+        wx.navigateTo({
+            url: '/pages/default-page/index'
         });
     },
     onTapNewPageWithoutShare() {
@@ -24,11 +34,6 @@ Page({
     onTapNewPageWithCustomShare() {
         wx.navigateTo({
             url: '/pages/new-page-with-custom-share/index'
-        });
-    },
-    onTapLibPage() {
-        wx.navigateTo({
-            url: '/pages/lib-page/index'
         });
     }
 });

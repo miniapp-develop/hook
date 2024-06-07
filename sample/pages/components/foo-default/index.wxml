@@ -1,2 +1,2 @@
-<view class="action old-class" bind:tap="onTap">foo-default.onTap</view>
-<view class="action old-class" bind:tap="onTapInner">foo-default.onTapInner</view>
+<view class="action old-class" bind:tap="onTap">OriginComponent.onTap</view>
+<view class="action old-class" bind:tap="onTapInner">OriginComponent.onTapInner</view>

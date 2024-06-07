@@ -5,7 +5,8 @@
     "pages/new-page-with-default-share/index",
     "pages/new-page-with-custom-share/index",
     "pages/lib-page/index",
-    "pages/old-page/index"
+    "pages/default-page/index",
+    "pages/origin-page/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

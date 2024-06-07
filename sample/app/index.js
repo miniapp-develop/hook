@@ -102,6 +102,9 @@ const NewPage = MiniHook._Page
             return {
                 before(e) {
                     console.log('[NewApp].onTap', this.getPageInfo(), host, e);
+                    wx.showModal({
+                        content: '[NewApp].onTap:' + this.data.name
+                    });
                 }
             };
         }
@@ -131,13 +134,13 @@ const NewComponent = MiniHook._Component.create(DefaultComponent).use({
     'methods.onTap': function (host) {
         return {
             before(e) {
-                console.log('[NewComponent].onTap:showModal', e);
+                console.log('[NewComponent].onTap before:showModal', e);
                 wx.showModal({
-                    content: 'NewComponent methods.onTap:' + this.data.name
+                    content: '[NewComponent] methods.onTap:' + this.data.name
                 });
             }
         };
     }
 });
 
-export { NewApp, NewComponent, NewPage, DefaultApp, DefaultPage, DefaultComponent };
+export { _OriginApp as OriginApp, _OriginPage as OriginPage, _OriginComponent as OriginComponent, DefaultApp, DefaultPage, DefaultComponent, NewApp, NewComponent, NewPage };

@@ -2,11 +2,16 @@
     <view class="header">
         Hello @mini-dev/hook
     </view>
-    <foo-new old-class="custom-class"/>
     <foo-default old-class="custom-class"/>
-
-    <view class="action" bind:tap="onTapOldPage">
-        DefaultPage 使用框架的原始 Page
+    <foo-new old-class="custom-class"/>
+    <view class="action" bind:tap="onTapOriginPage">
+        OriginPage 使用框架的原始 Page
+    </view>
+    <view class="action" bind:tap="onTapLibPage">
+        LibPage 使用库的默认 _Page
+    </view>
+    <view class="action" bind:tap="onTapDefaultPage">
+        DefaultPage 使用应用的旧有 Page
     </view>
     <view class="action" bind:tap="onTapNewPageWithoutShare">
         NewPage 未启用分享
@@ -16,8 +21,5 @@
     </view>
     <view class="action" bind:tap="onTapNewPageWithCustomShare">
         NewPage 启用自定义分享
-    </view>
-    <view class="action" bind:tap="onTapLibPage">
-        LibPage 使用库里面的 _Page
     </view>
 </view>
