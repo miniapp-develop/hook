@@ -1,9 +1,9 @@
-import {_Component as Component} from '../../../app/index';
+import { NewComponent } from '../../../app/index';
 
-Component({
+NewComponent({
     $_name_: 'foo-new.$_name_',
     data: {
-        $_name_: 'foo-new.data.$_name_',
+        $_name_: 'foo-new.data.$_name_'
     },
     methods: {
         onTap(e) {

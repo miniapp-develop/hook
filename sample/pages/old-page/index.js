@@ -1,6 +1,6 @@
-import _Page from '../../app/Page.old';
+import { OldPage } from '../../app/index';
 
-_Page({
+OldPage({
     onLoad(query) {
         console.log('Page.onLoad', this.route, query);
     }

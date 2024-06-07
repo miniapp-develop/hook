@@ -1,6 +1,6 @@
-import {_Page as Page} from '../../app/index';
+import { NewPage } from '../../app/index';
 
-Page({
+NewPage({
     __name__: 'page_with_custom_share',
     data: {
         name: 'new-page-with-custom-share'
