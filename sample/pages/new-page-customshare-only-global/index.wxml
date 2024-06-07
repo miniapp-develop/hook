@@ -1,5 +1,5 @@
 <view class="container">
     <view class="header">
-        New Page（默认分享）
+        New Page（自定义分享，但是只使用全局分享）
     </view>
 </view>

@@ -1,7 +1,8 @@
 import { NewPage } from '../../app/index';
 
 NewPage({
-    __name__: 'page_with_custom_share',
+    __name__: 'new-page-customshare-only-custom',
+    shareMode: 'custom-only',
     data: {
         name: 'new-page-with-custom-share'
     },

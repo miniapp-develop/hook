@@ -57,37 +57,32 @@ const NewPage = MiniHook._Page
             };
         },
         onShareAppMessage(page) {
-            if (this.onShareAppMessage) {
-                // 如果原来的页面配置框架的分享回调，则拦截
+            // global-only, custom-only, both(default)
+            if (page.shareMode === 'custom-only') {
+                return false;
+            } else if (page.shareMode === 'global-only') {
                 return {
                     afterReturn(result, { from, target, webViewUrl }) {
                         console.log('[Page].onShareAppMessage', result);
                         return {
-                            title: '默认分享标题!',
+                            title: '全局分享标题!',
+                            path: '/pages/index/index',
+                            imageUrl: 'https://avatars.githubusercontent.com/u/1892804?v=4'
+                        };
+                    }
+                };
+            } else {
+                return {
+                    afterReturn(result, { from, target, webViewUrl }) {
+                        console.log('[Page].onShareAppMessage', result);
+                        return {
+                            title: '全局分享标题!',
                             path: '/pages/index/index',
                             imageUrl: 'https://avatars.githubusercontent.com/u/1892804?v=4',
                             ...result
                         };
                     }
                 };
-            } else {
-                // 页面没有配置框架的分享回调
-                if (page.shareExcluded) {
-                    // 不需要自动注入回调
-                    return false;
-                } else {
-                    //自动注入分享回调
-                    return {
-                        afterReturn(result, res) {
-                            console.log('[Page].onShareAppMessage', result);
-                            return {
-                                title: '默认分享标题!',
-                                path: '/pages/index/index',
-                                imageUrl: 'https://avatars.githubusercontent.com/u/1892804?v=4'
-                            };
-                        }
-                    };
-                }
             }
         },
         getPageInfo: {

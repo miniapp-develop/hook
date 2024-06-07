@@ -1,19 +1,21 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/new-page-without-share/index",
-    "pages/new-page-with-default-share/index",
-    "pages/new-page-with-custom-share/index",
-    "pages/lib-page/index",
-    "pages/default-page/index",
-    "pages/origin-page/index"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/new-page-noshare-disable-global/index",
+        "pages/new-page-noshare-enable-global/index",
+        "pages/new-page-customshare-only-global/index",
+        "pages/new-page-customshare-only-custom/index",
+        "pages/new-page-customshare-both/index",
+        "pages/lib-page/index",
+        "pages/default-page/index",
+        "pages/origin-page/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
 }

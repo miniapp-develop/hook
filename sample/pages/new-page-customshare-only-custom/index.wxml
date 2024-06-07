@@ -1,6 +1,6 @@
 <view class="container">
     <view class="header">
-        New Page（自定义分享）
+        New Page（自定义分享，同时禁用全局分享）
     </view>
     <view>
         <button bind:tap="onTap">onTap</button>

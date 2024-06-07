@@ -21,19 +21,29 @@ Page({
             url: '/pages/default-page/index'
         });
     },
-    onTapNewPageWithoutShare() {
+    onTapNoShareEnableGlobal() {
         wx.navigateTo({
-            url: '/pages/new-page-without-share/index'
+            url: '/pages/new-page-noshare-enable-global/index'
         });
     },
-    onTapNewPageWithDefaultShare() {
+    onTapNoShareDisableGlobal() {
         wx.navigateTo({
-            url: '/pages/new-page-with-default-share/index'
+            url: '/pages/new-page-noshare-disable-global/index'
         });
     },
-    onTapNewPageWithCustomShare() {
+    onTapCustomShareBoth() {
         wx.navigateTo({
-            url: '/pages/new-page-with-custom-share/index'
+            url: '/pages/new-page-customshare-both/index'
+        });
+    },
+    onTapCustomShareAndOnlyCustom() {
+        wx.navigateTo({
+            url: '/pages/new-page-customshare-only-custom/index'
+        });
+    },
+    onTapCustomShareButOnlyGlobal() {
+        wx.navigateTo({
+            url: '/pages/new-page-customshare-only-global/index'
         });
     }
 });

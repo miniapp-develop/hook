@@ -13,13 +13,19 @@
     <view class="action" bind:tap="onTapDefaultPage">
         DefaultPage 使用应用的旧有 Page
     </view>
-    <view class="action" bind:tap="onTapNewPageWithoutShare">
-        NewPage 未启用分享
+    <view class="action no-share" bind:tap="onTapNoShareEnableGlobal">
+        未启用分享，默认开启全局分享
     </view>
-    <view class="action" bind:tap="onTapNewPageWithDefaultShare">
-        NewPage 启用默认分享
+    <view class="action no-share" bind:tap="onTapNoShareDisableGlobal">
+        未启用分享，同时禁用全局分享
     </view>
-    <view class="action" bind:tap="onTapNewPageWithCustomShare">
-        NewPage 启用自定义分享
+    <view class="action custom-share" bind:tap="onTapCustomShareBoth">
+        启用页内分享，默认启用全局分享
+    </view>
+    <view class="action custom-share " bind:tap="onTapCustomShareAndOnlyCustom">
+        启用页内分享，同时禁用全局分享
+    </view>
+    <view class="action custom-share" bind:tap="onTapCustomShareButOnlyGlobal">
+        启用页内分享，但是只使用全局分享
     </view>
 </view>
